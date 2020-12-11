@@ -2,10 +2,10 @@ from flask import Flask, jsonify
 from dotenv import load_dotenv
 import requests as r
 import json
-
+from flask_cors import CORS
 load_dotenv()
 app = Flask(__name__)
-
+CORS(app)
 import os
 
 
