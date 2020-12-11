@@ -1,21 +1,25 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from dotenv import load_dotenv
+from flask_cors import CORS
 import requests as r
 import json
-from flask_cors import CORS
+import os
+
 load_dotenv()
 app = Flask(__name__)
 CORS(app)
-import os
-
 
 @app.route('/')
 def hello_world():
-    li = getReceitas()
-    return jsonify(re =getGifs(li))
+    li = getReceitas(str(request.args.get('i')))
+    if li:
+        return jsonify(getGifs(li))
+    else:
+        return jsonify({"status":"error"})
 
-def getReceitas():
-    url = "http://www.recipepuppy.com/api/?i=onions"
+
+def getReceitas(parametro):
+    url = "http://www.recipepuppy.com/api/?i={}".format(parametro)
     return json.loads(r.request('GET', url).text)['results']
 
 def getGifs(lista_receitas):
