@@ -13,9 +13,9 @@ CORS(app)
 def gustavo():
     return """
         <img src='https://lh3.googleusercontent.com/proxy/3qbOZoq2VIx_L9pOUfsBmV1qg-ER-sXemoELZXFPuddVgLcKA3GY72PLbuPH69jF6jDnIohuQKqgK_9CViP6XwMMg-W9zV2plb1XWTRv9wAYqa2BpRrllwcXTN2lcxdW9PpXG7Ip7B3lLOpvl5OU7tM63foMqK0zICRBRY4'>
-        <p>Para usar a url</p>
+        <p>Para usar a API</p>
         <p>Tem que acessar o link</p>
-        <p>Passando as os ingredientes como mostrado no exemplo abaixo</p>
+        <p>Passando os ingredientes como mostrado no exemplo abaixo.</p>
         <a target="_blank" href="https://deploy-flask-1.herokuapp.com/receita/?i=onion,tomato">
             https://deploy-flask-1.herokuapp.com/receita/?i=onion,tomato
         </a>
