@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello from Flask {{ nome }}</title>
+</head>
+<body>
+    <img src='https://escolainterpares.com.br/wp-content/uploads/2018/03/BOAS-VINDAS.png' width="200px" height="200px">
+    <p>Para usar a API</p>
+    <p>Tem que acessar o link</p>
+    <p>Passando os ingredientes como mostrado no exemplo abaixo.</p>
+    <a target="_blank" href="https://deploy-flask-1.herokuapp.com/receita/?i=onion,tomato">
+        https://deploy-flask-1.herokuapp.com/receita/?i=onion,tomato
+    </a>
+
+
+    {% for i in nome %}
+        <p>{{ i }}</p>
+    {% endfor %}
+</body>
+</html>

@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from dotenv import load_dotenv
 from flask_cors import CORS
 import requests as r
@@ -11,15 +11,7 @@ CORS(app)
 
 @app.route('/')
 def gustavo():
-    return """
-        <img src='https://lh3.googleusercontent.com/proxy/3qbOZoq2VIx_L9pOUfsBmV1qg-ER-sXemoELZXFPuddVgLcKA3GY72PLbuPH69jF6jDnIohuQKqgK_9CViP6XwMMg-W9zV2plb1XWTRv9wAYqa2BpRrllwcXTN2lcxdW9PpXG7Ip7B3lLOpvl5OU7tM63foMqK0zICRBRY4'>
-        <p>Para usar a API</p>
-        <p>Tem que acessar o link</p>
-        <p>Passando os ingredientes como mostrado no exemplo abaixo.</p>
-        <a target="_blank" href="https://deploy-flask-1.herokuapp.com/receita/?i=onion,tomato">
-            https://deploy-flask-1.herokuapp.com/receita/?i=onion,tomato
-        </a>
-        """
+    return render_template('boas_vindas.html',nome=['gustavo','garcia','pereira'])
 
 @app.route('/receita/')
 def hello_world():
@@ -29,6 +21,10 @@ def hello_world():
     else:
         return jsonify({"status":"error"})
 
+
+@app.route('/tela-busca/')
+def tela_busca():
+    return render_template('tela_busca.html',nome=['gustavo','garcia','pereira'])
 
 def getReceitas(parametro):
     url = "http://www.recipepuppy.com/api/?i={}".format(parametro)
