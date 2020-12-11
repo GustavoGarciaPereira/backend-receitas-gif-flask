@@ -12,7 +12,7 @@ import os
 @app.route('/')
 def hello_world():
     li = getReceitas()
-    return jsonify(getGifs(li))
+    return jsonify(re =getGifs(li))
 
 def getReceitas():
     url = "http://www.recipepuppy.com/api/?i=onions"
