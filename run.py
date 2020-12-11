@@ -1,7 +1,8 @@
-from flask import Flask,jsonify
+from flask import Flask, jsonify
+from dotenv import load_dotenv
 import requests as r
 import json
-from dotenv import load_dotenv
+
 load_dotenv()
 app = Flask(__name__)
 
@@ -26,5 +27,5 @@ def getGifs(lista_receitas):
     return lista_receitas
     
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+	app.run(debug=True)
