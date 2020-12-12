@@ -39,5 +39,9 @@ def getGifs(lista_receitas):
     return lista_receitas
     
 
+@app.route('/teste-templete/')
+def teste_template():
+    return render_template('layout.html')
+
 if __name__ == '__main__':
 	app.run(debug=True)
