@@ -9,9 +9,10 @@
 
 
 {% block corpo %}
-    <img src="{{ url_for('static', filename='html-1.1s-47px(1).svg') }}" alt="">
+    <img src="{{ url_for('static', filename=imagem1) }}" alt="">
+    <img src="{{ url_for('static', filename=imagem2) }}" alt="" width="47px" height="47px">
             
     <a target="_blank" href="https://math.stackexchange.com/">
-        <img src="{{ url_for('static', filename='html-1.1s-47px(1).svg') }}" alt="">
+        <img src="{{ url_for('static', filename=imagem1) }}" alt="">
     </a>
 {% endblock %}

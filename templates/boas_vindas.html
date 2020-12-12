@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello from Flask {{ nome }}</title>
+    <title>{{ titulo }}</title>
 </head>
 <body>
     <img src='https://escolainterpares.com.br/wp-content/uploads/2018/03/BOAS-VINDAS.png' width="200px" height="200px">
@@ -14,9 +14,10 @@
         https://deploy-flask-1.herokuapp.com/receita/?i=onion,tomato
     </a>
 
-
-    {% for i in nome %}
-        <p>{{ i }}</p>
-    {% endfor %}
+    <ul>
+        {% for i in nome %}
+            <li style="list-style: none;">{{ i }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
