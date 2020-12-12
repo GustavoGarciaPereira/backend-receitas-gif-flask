@@ -41,7 +41,7 @@ def getGifs(lista_receitas):
 
 @app.route('/teste-templete/')
 def teste_template():
-    return render_template('layout.html')
+    return render_template('conteudo.html')
 
 if __name__ == '__main__':
 	app.run(debug=True)

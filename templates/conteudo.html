@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block menu %}
+    <div>
+        <a href="#">principal</a>
+        <a href="#">menos principal</a>
+    </div>
+{% endblock %}
+
+
+{% block corpo %}
+    <img src="{{ url_for('static', filename='html-1.1s-47px(1).svg') }}" alt="">
+            
+    <a target="_blank" href="https://math.stackexchange.com/">
+        <img src="{{ url_for('static', filename='html-1.1s-47px(1).svg') }}" alt="">
+    </a>
+{% endblock %}
