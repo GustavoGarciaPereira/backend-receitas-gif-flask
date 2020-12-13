@@ -13,7 +13,7 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/')
-def gustavo():
+def home():
     nomes = ['gustavo','garcia','pereira']
     titulo = "Gustavo API"
     return render_template('boas_vindas.html',
