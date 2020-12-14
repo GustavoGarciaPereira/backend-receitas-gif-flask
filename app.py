@@ -51,7 +51,6 @@ def getGifs(lista_receitas):
     
         for j in json.loads(t)['data']:
             lista_receitas[i]['url-gif'] = j['images']['original']['url']
-            lista_receitas[i]['thumbnail'] = lista_receitas[i]['thumbnail'].replace("http://","https://")
     return lista_receitas
     
 
