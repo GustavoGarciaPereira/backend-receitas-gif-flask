@@ -27,6 +27,15 @@ def hello_world():
     else:
         return jsonify({"status":"error"})
 
+@app.route('/receita/template/')
+def receitas_template():
+    li = getReceitas(str(request.args.get('i')))
+    if li:
+        return render_template('receitas.html',
+                            receitas=getGifs(li))
+    else:
+        return jsonify({"status":"error"})
+
 
 @app.route('/tela-busca/')
 def tela_busca():

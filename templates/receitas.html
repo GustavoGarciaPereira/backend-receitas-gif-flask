@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block menu %}
+    <div>
+        <a href="#">principal</a>
+        <a href="#">menos principal</a>
+    </div>
+{% endblock %}
+
+
+{% block corpo %}
+
+          {%for i in receitas%}
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ i.thumbnail }}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{ i.title }}</h5>
+                  <p class="card-text">{{ i.ingredients }}</p>
+                  <a href="{{ i.href }}" class="btn btn-primary">{{ i.title }}</a>
+                </div>
+              </div>
+
+              
+          {%endfor%}
+{% endblock %}
