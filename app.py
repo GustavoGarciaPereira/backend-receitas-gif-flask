@@ -17,12 +17,12 @@ def home():
     nomes = ['gustavo','garcia','pereira']
     titulo = "Gustavo API"
     return render_template('boas_vindas.html',
-                           nome=nomes,titulo=titulo)
+                        nome=nomes,titulo=titulo)
 
 @app.route('/receita/')
 def hello_world():
     receitas = getReceitas(str(request.args.get('i')))
-    if li:
+    if receitas:
         return jsonify(receitas)
     else:
         return jsonify({"status":"error"})
@@ -30,7 +30,7 @@ def hello_world():
 @app.route('/receita/template/')
 def receitas_template():
     receitas = getReceitas(str(request.args.get('i')))
-    if li:
+    if receitas:
         return render_template('receitas.html',
                             receitas=receitas)
     else:
@@ -57,8 +57,10 @@ def getReceitas(parametro):
 @app.route('/teste-templete/')
 def teste_template():
     return render_template('conteudo.html',
-                           imagem1 = "html-1.1s-47px(1).svg",
-                           imagem2 = "couch-1.1s-203px.svg")
+                        imagem1 = "html-1.1s-47px(1).svg",
+                        imagem2 = "couch-1.1s-203px.svg")
 
+        
+    
 if __name__ == '__main__':
 	app.run(debug=True)
