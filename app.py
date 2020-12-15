@@ -21,18 +21,18 @@ def home():
 
 @app.route('/receita/')
 def hello_world():
-    li = getReceitas(str(request.args.get('i')))
+    receitas = getReceitas(str(request.args.get('i')))
     if li:
-        return jsonify(getGifs(li))
+        return jsonify(receitas)
     else:
         return jsonify({"status":"error"})
 
 @app.route('/receita/template/')
 def receitas_template():
-    li = getReceitas(str(request.args.get('i')))
+    receitas = getReceitas(str(request.args.get('i')))
     if li:
         return render_template('receitas.html',
-                            receitas=getGifs(li))
+                            receitas=receitas)
     else:
         return jsonify({"status":"error"})
 
@@ -45,13 +45,13 @@ def getReceitas(parametro):
     url = "http://www.recipepuppy.com/api/?i={}".format(parametro)
     return json.loads(r.request('GET', url).text)['results']
 
-def getGifs(lista_receitas):
-    for i in range(len(lista_receitas)):
-        t = r.request('GET',"https://api.giphy.com/v1/gifs/search?api_key={}&q='{}'&limit=1&offset=0&rating=g&lang=en".format(os.getenv("GIF_API"),lista_receitas[i]['title'])).text
-    
-        for j in json.loads(t)['data']:
-            lista_receitas[i]['url-gif'] = j['images']['original']['url']
-    return lista_receitas
+#def getGifs(lista_receitas):
+#    for i in range(len(lista_receitas)):
+#        t = r.request('GET',"https://api.giphy.com/v1/gifs/search?api_key={}&q='{}'&limit=1&offset=0&rating=g&lang=en".format(os.getenv("GIF_API"),lista_receitas[i]['title'])).text
+#    
+#        for j in json.loads(t)['data']:
+#            lista_receitas[i]['url-gif'] = j['images']['original']['url']
+#    return lista_receitas
     
 
 @app.route('/teste-templete/')
