@@ -11,14 +11,13 @@
 {% block corpo %}
 <div class="container">
   <div class="row center_custon">
-          {%for i in receitas%}
-          
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{ i.thumbnail }}" alt="Card image cap">
+          {%for receita in receitas%}
+            <div class="card p-1" style="width: 18rem;">
+                <img class="card-img-top" src="{{ receitathumbnail }}" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">{{ i.title }}</h5>
-                  <p class="card-text">{{ i.ingredients }}</p>
-                  <a href="{{ i.href }}" class="btn btn-primary">{{ i.title }}</a>
+                  <h5 class="card-title">{{ receitatitle }}</h5>
+                  <p class="card-text">{{ receitaingredients }}</p>
+                  <a href="{{ receitahref }}" class="btn btn-primary">{{ receitatitle }}</a>
                 </div>
               </div>
           {%endfor%}
