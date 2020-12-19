@@ -13,11 +13,11 @@
   <div class="row center_custon">
           {%for receita in receitas%}
             <div class="card p-1" style="width: 18rem;">
-                <img class="card-img-top" src="{{ receitathumbnail }}" alt="Card image cap">
+                <img class="card-img-top" src="{{ receita.thumbnail }}" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title">{{ receitatitle }}</h5>
-                  <p class="card-text">{{ receitaingredients }}</p>
-                  <a href="{{ receitahref }}" class="btn btn-primary">{{ receitatitle }}</a>
+                  <h5 class="card-title">{{ receita.title }}</h5>
+                  <p class="card-text">{{ receita.ingredients }}</p>
+                  <a href="{{ receita.href }}" class="btn btn-primary">{{ receita.title }}</a>
                 </div>
               </div>
           {%endfor%}
