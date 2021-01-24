@@ -66,8 +66,7 @@ def teste_template():
 @app.route('/api/ppt/jogada')
 def pedra_papel_tasoura():
     usuario = request.args.get('jogada_usuario')
-    #computador = random.choice(['pedra','papel','tesoura'])
-    computador = random.choice(['tesoura'])
+    computador = random.choice(['pedra','papel','tesoura'])
     obj = vitoria(usuario, computador)
     return jsonify(
         obj
