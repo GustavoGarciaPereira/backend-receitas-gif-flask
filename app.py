@@ -96,7 +96,7 @@ def vitoria(usuario,computador):
     
     if usuario == 'pedra' and computador == 'tesoura':
         obj['vitoria'] = 'usuario'
-        obj['mensagem'] = 'usuario venceu'
+        obj['mensagem'] = 'vecê venceu'
         obj['img1'] = img[usuario]
         obj['img2'] = img[computador]
 
@@ -108,7 +108,7 @@ def vitoria(usuario,computador):
 
     if usuario == 'papel' and computador == 'pedra':
         obj['vitoria'] = 'usuario'
-        obj['mensagem'] = 'usuario venceu'
+        obj['mensagem'] = 'vecê venceu'
         obj['img1'] = img[usuario]
         obj['img2'] = img[computador] 
 
@@ -120,7 +120,7 @@ def vitoria(usuario,computador):
 
     if usuario == 'tesoura' and computador == 'papel':
         obj['vitoria'] = 'usuario'
-        obj['mensagem'] = 'usuario venceu'
+        obj['mensagem'] = 'vecê venceu'
         obj['img1'] = img[usuario]
         obj['img2'] = img[computador] 
 
@@ -133,8 +133,6 @@ def vitoria(usuario,computador):
     if obj['vitoria']=='' and obj['mensagem'] == '':
         obj['vitoria'] = 'empate'
         obj['mensagem'] = 'deu empate'
-        print(usuario,"img[usuario]",img[usuario])
-        print(computador,"img[computador]",img[computador])
         obj['img1'] = img[usuario]
         obj['img2'] =  img[computador] 
     
