@@ -9,7 +9,6 @@ import random
 
 load_dotenv()
 
-
 app = Flask(__name__)
 CORS(app)
 
@@ -96,7 +95,7 @@ def vitoria(usuario,computador):
     
     if usuario == 'pedra' and computador == 'tesoura':
         obj['vitoria'] = 'usuario'
-        obj['mensagem'] = 'vecê venceu'
+        obj['mensagem'] = 'você venceu'
         obj['img1'] = img[usuario]
         obj['img2'] = img[computador]
 
@@ -108,7 +107,7 @@ def vitoria(usuario,computador):
 
     if usuario == 'papel' and computador == 'pedra':
         obj['vitoria'] = 'usuario'
-        obj['mensagem'] = 'vecê venceu'
+        obj['mensagem'] = 'você venceu'
         obj['img1'] = img[usuario]
         obj['img2'] = img[computador] 
 
@@ -120,7 +119,7 @@ def vitoria(usuario,computador):
 
     if usuario == 'tesoura' and computador == 'papel':
         obj['vitoria'] = 'usuario'
-        obj['mensagem'] = 'vecê venceu'
+        obj['mensagem'] = 'você venceu'
         obj['img1'] = img[usuario]
         obj['img2'] = img[computador] 
 
