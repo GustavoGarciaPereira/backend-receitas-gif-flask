@@ -15,7 +15,7 @@ app = Flask(__name__)
 CORS(app)
 
 app.register_blueprint(simple_page)
-app.run(debug=API_DEBUG)
+app.run(debug=os.getenv("API_DEBUG"))
 @app.route('/')
 def home():
     nomes = ['gustavo','garcia','pereira']
