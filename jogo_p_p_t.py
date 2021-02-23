@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify,request,render_template, abort
 from jinja2 import TemplateNotFound
 import random
-simple_page = Blueprint('jogo', __name__,
+simple_simple_pagepage = Blueprint('jogo', __name__,
                         url_prefix="/api/ppt")
 
 
