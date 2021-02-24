@@ -6,7 +6,8 @@ import json
 import os
 import random
 
-from jogo_p_p_t import config
+from jogo_p_p_t import config as config_jogo
+from bioinformatica import config as config_bio
 
 load_dotenv()
 def criate_app():
@@ -14,9 +15,10 @@ def criate_app():
 
     CORS(app)
 
-    config(app)
+    config_jogo(app)
+    config_bio(app)
 
-    #app.run(debug=False)
+    
    
     @app.route('/')
     def home():
