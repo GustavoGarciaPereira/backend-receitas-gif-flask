@@ -6,8 +6,8 @@ import json
 import os
 import random
 
-from jogo_p_p_t import config as config_jogo
-from bioinformatica import config as config_bio
+from .jogo_p_p_t import config as config_jogo
+from .bioinformatica import config as config_bio
 
 load_dotenv()
 def criate_app():
@@ -18,8 +18,6 @@ def criate_app():
     config_jogo(app)
     config_bio(app)
 
-    
-   
     @app.route('/')
     def home():
         nomes = ['gustavo','garcia','pereira']
@@ -44,7 +42,6 @@ def criate_app():
         else:
             return jsonify({"status":"error"})
 
-
     @app.route('/tela-busca/')
     def tela_busca():
         return render_template('tela_busca.html',nome=['gustavo','garcia','pereira'])
@@ -52,15 +49,6 @@ def criate_app():
     def getReceitas(parametro):
         url = "http://www.recipepuppy.com/api/?i={}".format(parametro)
         return json.loads(r.request('GET', url).text)['results']
-
-    #def getGifs(lista_receitas):
-    #    for i in range(len(lista_receitas)):
-    #        t = r.request('GET',"https://api.giphy.com/v1/gifs/search?api_key={}&q='{}'&limit=1&offset=0&rating=g&lang=en".format(os.getenv("GIF_API"),lista_receitas[i]['title'])).text
-    #    
-    #        for j in json.loads(t)['data']:
-    #            lista_receitas[i]['url-gif'] = j['images']['original']['url']
-    #    return lista_receitas
-        
 
     @app.route('/teste-templete/')
     def teste_template():
