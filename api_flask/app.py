@@ -6,9 +6,9 @@ import json
 import os
 import random
 
-from .jogo_p_p_t import config as config_jogo
-from .bioinformatica import config as config_bio
-from .api_feriado import config as config_feriados
+from jogo_p_p_t import config as config_jogo
+from bioinformatica import config as config_bio
+from api_feriado import config as config_feriados
 
 load_dotenv()
 def criate_app():

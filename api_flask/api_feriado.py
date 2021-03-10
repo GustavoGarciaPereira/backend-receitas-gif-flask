@@ -17,8 +17,11 @@ data_feriado = Blueprint('api_data', __name__,
 
 @data_feriado.route('/')
 def feriado():
+    print(">>estado",request.args.get('estado'))
+    print(">>cidade",request.args.get('cidade'))
     url = 'http://www.calendario.com.br/feriados-santa-maria-rs.php?ano=2021'
 
+    
     #url estado
     #url = 'http://www.calendario.com.br/feriados-estado-rs.php?ano=2021'
 
