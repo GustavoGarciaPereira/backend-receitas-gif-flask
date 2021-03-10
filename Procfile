@@ -1,1 +1,1 @@
-web: gunicorn api_flask/app:'criate_app()'
+web: gunicorn --chdir api_flask app:'criate_app()'
