@@ -18,7 +18,7 @@ def criate_app():
 
     config_jogo(app)
     config_bio(app)
-    config_feriados(app)
+    #config_feriados(app)
 
     @app.route('/')
     def home():
