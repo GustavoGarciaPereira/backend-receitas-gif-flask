@@ -24,11 +24,11 @@ def vitoria(usuario, computador):
     }
     img = {
         "pedra": "https://res.cloudinary.com/dminw7meh/image\
-            /upload/v1611517829/img-jogo-site/pedra_nzefl3.svg",
+/upload/v1611517829/img-jogo-site/pedra_nzefl3.svg",
         "tesoura": "https://res.cloudinary.com/dminw7meh/image\
-                /upload/v1611517830/img-jogo-site/tesoura_oulwv9.svg",
+/upload/v1611517830/img-jogo-site/tesoura_oulwv9.svg",
         "papel": "https://res.cloudinary.com/dminw7meh/image\
-            /upload/v1611517829/img-jogo-site/papel_rmwauk.svg",
+/upload/v1611517829/img-jogo-site/papel_rmwauk.svg",
     }
     # pe > t
     # pe < pa
