@@ -15,7 +15,7 @@ def pedra_papel_tasoura():
 def vitoria(usuario, computador):
 
     obj = {
-        "usuario":"{}".format(usuario),
+        "usuario": "{}".format(usuario),
         "computado": "{}".format(computador),
         "vitoria": "",
         "mensagem": "",
