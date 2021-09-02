@@ -6,6 +6,7 @@ from views.jogo_p_p_t import config as config_jogo
 from views.bioinformatica import config as config_bio
 from views.api_feriado import config as config_feriados
 from views.receitas import config as config_receita
+from views.livros import config as config_livros
 
 load_dotenv()
 
@@ -19,6 +20,7 @@ def criate_app():
     config_bio(app)
     config_feriados(app)
     config_receita(app)
+    config_livros(app)
 
     @app.route("/")
     def home():
