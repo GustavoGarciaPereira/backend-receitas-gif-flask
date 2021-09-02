@@ -2,10 +2,10 @@ from flask import Flask, render_template
 from dotenv import load_dotenv
 from flask_cors import CORS
 
-from jogo_p_p_t import config as config_jogo
-from bioinformatica import config as config_bio
-from api_feriado import config as config_feriados
-from receitas import config as config_receita
+from views.jogo_p_p_t import config as config_jogo
+from views.bioinformatica import config as config_bio
+from views.api_feriado import config as config_feriados
+from views.receitas import config as config_receita
 
 load_dotenv()
 
